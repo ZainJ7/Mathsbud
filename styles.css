@@ -10,16 +10,16 @@ body {
   grid-template-rows: 120px 1fr 1fr;
   gap: 40px;
   padding: 24px;
-  background-image: url('/assests/websiteClouds.png');
+  background-image: url("/assets/websiteClouds.png");
   background-repeat: no-repeat;
   background-size: cover;
+  cursor: url('cursor.png'), auto;
 }
 
-.logo {
-  width: 310px;
-  height: 49px;
+.logo img {
+  width: 330px;
+  height: 70px;
 }
-
 
 .card-1 {
   grid-column: 1 / 2;
@@ -33,23 +33,21 @@ body {
   grid-row: 1 / 2;
   display: flex;
   gap: 10px;
-  flex-wrap: wrap ;
+  flex-wrap: wrap;
   padding: 10px;
 }
 
 .card-3 {
   grid-column: 1 / 3;
-  grid-row: 2 / 4 ;
+  grid-row: 2 / 4;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 20px;
 }
 
-
-
 .nav-button {
-  padding: 20px 20px ;
+  padding: 20px 20px;
   border-radius: 18px;
   font-family: "Rounded Mplus 1c";
   font-style: normal;
@@ -66,8 +64,12 @@ body {
 }
 
 .nav-button-home {
-  background: #74d149;
+  background: #7ce24c;
   box-shadow: 0px 6px 0px 1px #73b74b;
+}
+
+.nav-button-home:hover {
+  background-color: #73b74b;
 }
 
 .nav-button-games {
@@ -75,13 +77,21 @@ body {
   box-shadow: 0px 6px 0px 1px #d760b4;
 }
 
+.nav-button-games:hover {
+  background-color: #d760b4;
+}
+
 .nav-button-about-us {
   background: #75b7ff;
   box-shadow: 0px 6px 0px 1px #429af7;
 }
 
+.nav-button-about-us:hover {
+  background-color: #429af7;
+}
+
 .game-button {
-  padding: 10px 10px ;
+  padding: 10px 10px;
   border-radius: 24px;
   font-family: "Rounded Mplus 1c";
   font-style: normal;
@@ -99,37 +109,57 @@ body {
 }
 
 .game-button-addition {
-  background: #74d149;
+  background: #7ce24c;
   box-shadow: 0px 6px 0px 1px #73b74b;
   gap: 10px;
 }
 
+.game-button-addition:hover {
+  background-color: #73b74b;
+}
+
 .game-button-subtraction {
-  background: #75B7FF;
-box-shadow: 0px 6px 0px 1px #429AF7;
-gap: 40px;
+  background: #75b7ff;
+  box-shadow: 0px 6px 0px 1px #429af7;
+  gap: 40px;
+}
+
+.game-button-subtraction:hover {
+  background-color: #429af7;
 }
 
 .game-button-multiplication {
-background: #FD94DE;
-box-shadow: 0px 6px 0px 1px #D760B4;
-gap: 15px;
+  background: #fd94de;
+  box-shadow: 0px 6px 0px 1px #d760b4;
+  gap: 15px;
+}
+
+.game-button-multiplication:hover {
+  background-color: #d760b4;
 }
 
 .game-button-division {
-  background: #B368FE;
-  box-shadow: 0px 6px 0px 1px #8737EC;
+  background: #b368fe;
+  box-shadow: 0px 6px 0px 1px #8737ec;
   gap: 10px;
+}
+
+.game-button-division:hover {
+  background: #8737ec;
 }
 
 .game-button-dice {
-  background: #FA8F43;
-  box-shadow: 0px 6px 0px 1px #FF791B;
+  background: #fa8f43;
+  box-shadow: 0px 6px 0px 1px #ff791b;
   gap: 10px;
 }
 
+.game-button-dice:hover {
+  background: #ff791b;
+}
+
 .title-button {
-  padding: 20px 10px ;
+  padding: 20px 10px;
   gap: 20px;
   border-radius: 24px;
   font-family: "Rounded Mplus 1c";
@@ -145,31 +175,441 @@ gap: 15px;
   text-decoration: none;
   flex-grow: 1;
   flex-direction: column;
-  background: #B368FE;
-  box-shadow: 0px 6px 0px 1px #8737EC; 
-  word-wrap: break-word; 
+  background: #b368fe;
+  box-shadow: 0px 6px 0px 1px #8737ec;
+  word-wrap: break-word;
+}
+
+.game-card-3 {
+  grid-column: 1 / 3;
+  grid-row: 2 / 4; /* Updated to span two rows */
+  width: 100%;
+  border-radius: 5px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+#info-container {
+  grid-column: 1 / 4; /* Updated to span all columns */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  outline: black 2px solid;
+  border-radius: 5px;
+  font-family: "Rounded Mplus 1c";
+  font-size: 35px;
+  line-height: 1.5;
+  text-align: center;
+  width: 100%;
+  backdrop-filter: blur(16px);
+}
+
+#modes-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  grid-column: 1/2;
+  font-family: "Rounded Mplus 1c";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  grid-column: 2/3;
+}
+
+.restart-container {
+  grid-column: 3/4;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+}
+
+.addition-button {
+  background: #7ce24c;
+  box-shadow: 0px 6px 0px 1px #73b74b;
+  gap: 10px;
+}
+
+.subtraction-button {
+  background: #75b7ff;
+  box-shadow: 0px 6px 0px 1px #429af7;
+  gap: 40px;
+}
+
+.multiplication-button {
+  background: #fd94de;
+  box-shadow: 0px 6px 0px 1px #d760b4;
+  gap: 15px;
+}
+
+.division-button {
+  background: #b368fe;
+  box-shadow: 0px 6px 0px 1px #8737ec;
+  gap: 10px;
+}
+
+.addition-button:hover {
+  background-color: #73b74b;
+}
+
+.subtraction-button:hover {
+  background-color: #429af7;
+}
+
+.multiplication-button:hover {
+  background-color: #d760b4;
+}
+
+.division-button:hover {
+  background-color: #8543c8;
+}
+
+#problem {
+  font-family: "Rounded Mplus 1c";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#options button {
+  margin: 10px;
+  padding: 10px;
+  background: #ff434d;
+  box-shadow: 0px 6px 0px 1px #c81c25;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: "Rounded Mplus 1c";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 35px;
+}
+
+#options button:hover {
+  background-color: #c81c25;
+}
+
+#result {
+  font-family: "Rounded Mplus 1c";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+#score {
+  font-family: "Rounded Mplus 1c";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.restart-button {
+  margin: 5px;
+  padding: 10px;
+  font-family: "Rounded Mplus 1c";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 35px;
+  background: #ff434d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0px 6px 0px 1px #c81c25;
+}
+
+.restart-button:hover {
+  background-color: #c81c25;
+}
+
+.problem-container h2,
+.options-container h2,
+.result-container h2,
+.score-container h2 {
+  font-family: "Rounded Mplus 1c";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+.mode-button {
+  margin: 5px;
+  padding: 10px;
+  font-family: "Rounded Mplus 1c";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 35px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#modes-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#modes-container li {
+  margin-bottom: 10px;
+}
+
+#agree-button {
+  margin: 5px;
+  padding: 10px;
+  font-family: "Rounded Mplus 1c";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 35px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background: #7ce24c;
+  box-shadow: 0px 6px 0px 1px #73b74b;
+  gap: 10px;
+}
+
+#agree-button:hover {
+  background-color: #73b74b;
+}
+
+#about-us-container {
+  grid-column: 1 / 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 10px;
+  outline: black 2px solid;
+  border-radius: 5px;
+  font-family: "Rounded Mplus 1c";
+  font-size: 25px;
+  line-height: 1.5;
+  text-align: center;
+  width: 100%;
+  color: black;
+  backdrop-filter: blur(16px); 
 }
 
 
-@media (max-width: 750px) {
+
+/* For screens smaller than 768px */
+@media (max-width: 767px) {
   body {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 80px 1fr;
   }
 
   .card-1 {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    display: flex;
+    justify-content: center;
   }
 
   .card-2 {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: center;
+  }
+
+  .game-card-3 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .card-3 {
     grid-column: 1 / 2;
-    grid-row: 3 / 6;
+    grid-row: 3 / 4;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
+  #about-us-container {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    width: 100%;
+    padding: 10px;
+    outline: black 2px solid;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .nav-button {
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    max-height: 80px;
+  }
+}
+
+
+
+
+
+/* For screens larger than 768px */
+@media (min-width: 768px) {
+  .title-button {
+    font-size: 50px;
+    padding: 20px 10px;
+  }
+
+  .game-button {
+    font-size: 40px;
+    padding: 10px;
+    height: 160px;
+  }
+
+  .addition-svg,
+  .subtraction-svg,
+  .division-svg,
+  .dice-svg {
+    height: 100px;
+    width: 100px;
+  }
+
+  body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 120px 1fr 1fr;
+    gap: 40px;
+    padding: 24px;
+    background-image: url("/assets/websiteClouds.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .card-1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    display: flex;
+    align-items: center;
+  }
+
+  .card-2 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+
+  .logo img {
+    width: 330px;
+    height: 70px;
+  }
+
+  .game-card-3 {
+    grid-column: 1 / 3;
+    grid-row: 2 / 4;
+    width: 100%;
+    border-radius: 5px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  .card-3 {
+    grid-column: 1 / 3;
+    grid-row: 2 / 4;
+    width: 100%;
+    border-radius: 5px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  .nav-button {
+    padding: 20px 20px;
+    border-radius: 18px;
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 37px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    flex-grow: 1;
+    max-height: 100px;
+  }
+
+  #about-us-container {
+    grid-column: 1 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+    outline: black 2px solid;
+    border-radius: 5px;
+    font-family: "Rounded Mplus 1c";
+    font-size: 25px;
+    line-height: 1.5;
+    text-align: center;
+    width: 100%;
+    color: black;
+    backdrop-filter: blur(16px);
+  }
+
+  .nav-button-home {
+    background: #7ce24c;
+    box-shadow: 0px 6px 0px 1px #73b74b;
+  }
+
+  .nav-button-games {
+    background: #fd94de;
+    box-shadow: 0px 6px 0px 1px #d760b4;
+  }
+
+  .nav-button-about-us {
+    background: #75b7ff;
+    box-shadow: 0px 6px 0px 1px #429af7;
+  }
+}
+
+
+
+/* repeat background when larger height */
+@media (min-height: 680px) {
+  body {
+    background-repeat: repeat;
+  }
 }
