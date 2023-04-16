@@ -47,9 +47,9 @@ function newProblem() {
       answer = num1 * num2;
       break;
     case "division":
-      answer = Math.floor(Math.random() * 10) + 1;
-      num2 = Math.floor(Math.random() * 10) + 1;
-      num1 = answer * num2;
+      num2 = Math.floor(Math.random() * 5) + 1; // Generate a number between 1 and 5
+      answer = Math.floor(Math.random() * 10) + 1; // Generate a number between 1 and 10
+      num1 = answer * num2; // Calculate num1 such that the answer is an integer
       break;
   }
   // Set up the answer choices
