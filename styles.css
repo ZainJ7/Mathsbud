@@ -424,6 +424,8 @@ body {
     grid-row: 1 / 2;
     display: flex;
     justify-content: center;
+    width: 100%; 
+    height: auto; 
   }
 
   .card-2 {
@@ -434,6 +436,8 @@ body {
     flex-wrap: wrap;
     padding: 10px;
     justify-content: center;
+    width: 100%; 
+    height: auto; 
   }
 
   .game-card-3 {
@@ -473,6 +477,16 @@ body {
     font-size: 20px;
     line-height: 25px;
     max-height: 80px;
+  }
+  .logo img {
+    width: 100%; 
+    height: auto; 
+  }
+  .game-button {
+    width: 100%;
+  }
+  .title-button {
+    width: 100%;
   }
 }
 
@@ -613,3 +627,5 @@ body {
     background-repeat: repeat;
   }
 }
+
+
