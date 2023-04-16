@@ -13,7 +13,7 @@ body {
   background-image: url("/assets/websiteClouds.png");
   background-repeat: no-repeat;
   background-size: cover;
-  cursor: url('cursor.png'), auto;
+  cursor: url('assets/cursor.svg'), auto;
 }
 
 .logo img {
@@ -290,7 +290,7 @@ body {
   box-shadow: 0px 6px 0px 1px #c81c25;
   color: white;
   border: none;
-  cursor: pointer;
+  /* cursor: pointer; */
   border-radius: 5px;
   font-family: "Rounded Mplus 1c";
   font-style: normal;
@@ -328,7 +328,7 @@ body {
   background: #ff434d;
   color: white;
   border: none;
-  cursor: pointer;
+  /* cursor: pointer; */
   border-radius: 5px;
   box-shadow: 0px 6px 0px 1px #c81c25;
 }
@@ -357,7 +357,7 @@ body {
   font-size: 35px;
   color: white;
   border: none;
-  cursor: pointer;
+  /* cursor: pointer; */
   border-radius: 5px;
 }
 
@@ -380,7 +380,7 @@ body {
   font-size: 35px;
   color: white;
   border: none;
-  cursor: pointer;
+  /* cursor: pointer; */
   border-radius: 5px;
   background: #7ce24c;
   box-shadow: 0px 6px 0px 1px #73b74b;
@@ -629,3 +629,8 @@ body {
 }
 
 
+@media (max-width: 269px) {
+  .game-card-3 {
+    margin-top: 50px;
+  }
+}
