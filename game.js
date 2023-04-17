@@ -106,6 +106,7 @@ function selectAnswer(selected) {
       setTimeout(function () {
         document.getElementById("result").innerHTML = "";
       }, 1000);
+      document.getElementById("win-sound").play(); 
     } else {
       newProblem();
       setTimeout(function () {
