@@ -4,28 +4,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Math Game</title>
     <link rel="stylesheet" href="styles.css" />
     <audio id="correct-sound" src="assets/correct-sound.mp3"></audio>
+    <audio id="correct-sound-2" src="assets/correct-sound-2.mp3"></audio>
+    <audio id="correct-sound-3" src="assets/correct-sound-3.mp3"></audio>
     <audio id="incorrect-sound" src="assets/incorrect-sound.mp3"></audio>
+    <audio id="incorrect-sound-2" src="assets/incorrect-sound-2.mp3"></audio>
     <audio id="win-sound" src="assets/you-win.mp3"></audio>
   </head>
 
   <body>
-    <div class="card-1">
-      <a href="" class="logo">
-        <img src="assets/logo.png" alt="" />
+    <div class="card-1" role="banner">
+      <a href="/" class="logo" title="Return to the homepage">
+        <img src="assets/logo.png" alt="Logo of the math game" />
       </a>
     </div>
-    <div class="card-2">
-      <a href="index.html" class="nav-button nav-button-home"> Home </a>
-      <a href="game.html" class="nav-button nav-button-games"> Games </a>
-      <a href="about-us.html" class="nav-button nav-button-about-us">
-        About Us
-      </a>
+    <div class="card-2" role="navigation">
+      <a href="index.html" class="nav-button nav-button-home" title="Go to the homepage"> Home </a>
+      <a href="game.html" class="nav-button nav-button-games" title="Go to the games page"> Games </a>
+      <a href="about-us.html" class="nav-button nav-button-about-us" title="Go to the About Us page"> About Us </a>
     </div>
-    <div class="game-card-3">
-      <div id="info-container">
+    <div class="game-card-3" role="main">
+      <div id="info-container" role="alert">
         <h2>Welcome to the Math Game!</h2>
         <p>
           In this game, you will be given a math problem to solve. You will have
@@ -34,15 +35,16 @@
           will lose a point. The goal of the game is to score 10 points. Have
           fun and good luck!
         </p>
-        <button id="agree-button" onclick="showModes()">Agree and Play</button>
+        <button id="agree-button" onclick="showModes()" aria-label="Agree and Play Button">Agree and Play</button>
       </div>
-      <div id="modes-container" style="display: none">
-        <h2>Modes:</h2>
+      <div id="modes-container" style="display: none" role="region" aria-labelledby="modes-label">
+        <h2 id="modes-label">Modes:</h2>
         <ul>
           <li>
             <button
               class="mode-button addition-button"
               onclick="setMode('addition')"
+              aria-label="Addition Mode Button"
             >
               Addition
             </button>
@@ -51,6 +53,7 @@
             <button
               class="mode-button subtraction-button"
               onclick="setMode('subtraction')"
+              aria-label="Subtraction Mode Button"
             >
               Subtraction
             </button>
@@ -59,6 +62,7 @@
             <button
               class="mode-button multiplication-button"
               onclick="setMode('multiplication')"
+              aria-label="Multiplication Mode Button"
             >
               Multiplication
             </button>
@@ -67,13 +71,14 @@
             <button
               class="mode-button division-button"
               onclick="setMode('division')"
+              aria-label="Division Mode Button"
             >
               Division
             </button>
           </li>
         </ul>
       </div>
-      <div class="content-container" style="display: none">
+      <div class="content-container" style="display: none" role="group">
         <div class="problem-container">
           <h2>Problem:</h2>
           <div id="problem"></div>
@@ -82,10 +87,10 @@
           <h2>Options:</h2>
           <div id="options"></div>
         </div>
-        <div class="result-container">
+        <div class="result-container" role="status" aria-live="polite" aria-atomic="true">
           <div id="result"></div>
         </div>
-        <div class="score-container">
+        <div class="score-container" role="status" aria-live="polite" aria-atomic="true">
           <div id="score"></div>
         </div>
       </div>

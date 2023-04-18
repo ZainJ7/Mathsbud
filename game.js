@@ -112,8 +112,12 @@ function selectAnswer(selected) {
       setTimeout(function () {
         document.getElementById("result").innerHTML = "";
       }, 1000);
+      var correctSounds = ["correct-sound", "correct-sound-2", "correct-sound-3"]; // array of sound files
+      var randomIndex = Math.floor(Math.random() * correctSounds.length); // select a random index from the array
+      var soundFile = correctSounds[randomIndex]; // get the sound file at the random index
+      var audio = document.getElementById(soundFile); // get the audio element using the ID
+      audio.play(); // play the sound effect
     }
-    document.getElementById("correct-sound").play(); // play correct sound effect
   } else {
     document.getElementById("result").innerHTML =
       "<span style='color:red'>Incorrect!</span>";
@@ -124,9 +128,14 @@ function selectAnswer(selected) {
     setTimeout(function () {
       document.getElementById("result").innerHTML = "";
     }, 1000);
-    document.getElementById("incorrect-sound").play(); // play incorrect sound effect
+    var incorrectSounds = ["incorrect-sound", "incorrect-sound-2"]; // array of sound files
+    var randomIndex = Math.floor(Math.random() * incorrectSounds.length); // select a random index from the array
+    var soundFile = incorrectSounds[randomIndex]; // get the sound file at the random index
+    var audio = document.getElementById(soundFile); // get the audio element using the ID
+    audio.play(); // play the sound effect
   }
 }
+
 
 // Function to handle the "Restart Game" button click
 function restartGame() {

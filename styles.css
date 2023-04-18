@@ -191,6 +191,19 @@ body {
   gap: 20px;
 }
 
+.about-us-card-3 {
+  grid-column: 1 / 3;
+  grid-row: 2 / 4; /* Updated to span two rows */
+  width: 100%;
+  border-radius: 5px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+
+
 #info-container {
   grid-column: 1 / 4; /* Updated to span all columns */
   display: flex;
@@ -450,6 +463,16 @@ body {
     align-items: center;
   }
 
+  .about-us-card-3 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .card-3 {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
@@ -558,6 +581,17 @@ body {
     gap: 20px;
   }
 
+  .about-us-card-3 {
+    grid-column: 1 / 3;
+    grid-row: 2 / 4;
+    width: 100%;
+    border-radius: 5px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
   .card-3 {
     grid-column: 1 / 3;
     grid-row: 2 / 4;
@@ -620,7 +654,6 @@ body {
 }
 
 
-
 /* repeat background when larger height */
 @media (min-height: 680px) {
   body {
@@ -631,6 +664,14 @@ body {
 
 @media (max-width: 269px) {
   .game-card-3 {
+    margin-top: 50px;
+  }
+
+  .about-us-card-3 {
+    margin-top: 50px;
+  }
+
+  .card-3 {
     margin-top: 50px;
   }
 }

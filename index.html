@@ -4,54 +4,56 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Choose Your Game</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
-    <div class="card-1">
-      <a href="" class="logo">
-        <img src="assets/logo.png" alt="" />
+    <div class="card-1" role="banner">
+      <a href="/" class="logo" title="Return to the homepage">
+        <img src="assets/logo.png" alt="Logo of the math game" />
       </a>
     </div>
-    <div class="card-2">
-      <a href="index.html" class="nav-button nav-button-home"> Home </a>
-      <a href="game.html" class="nav-button nav-button-games"> Games </a>
-      <a href="about-us.html" class="nav-button nav-button-about-us">
-        About Us
-      </a>
+    <div class="card-2" role="navigation">
+      <a href="index.html" class="nav-button nav-button-home" title="Go to the homepage"> Home </a>
+      <a href="game.html" class="nav-button nav-button-games" title="Go to the games page"> Games </a>
+      <a href="about-us.html" class="nav-button nav-button-about-us" title="Go to the About Us page"> About Us </a>
     </div>
     <div class="card-3">
-      <div href="" class="title-button">
-        <span> Choose Your Game.... </span>
+      <div class="title-button">
+        <span>Choose Your Game....</span>
       </div>
       <a
         href="game.html?mode=addition"
         class="game-button game-button-addition"
+        title="Play Addition game"
       >
-        <span> Addition </span> <img class="addition-svg" src="assets/addditionSymbol.svg" />
+        <span> Addition </span> <img class="addition-svg" src="assets/addditionSymbol.svg" alt="Addition symbol" />
       </a>
       <a
         href="game.html?mode=subtraction"
         class="game-button game-button-subtraction"
+        title="Play Subtraction game"
       >
-        <span> Subtraction </span> <img class="subtraction-svg" src="assets/subractionSymbol.svg" />
+        <span> Subtraction </span> <img class="subtraction-svg" src="assets/subractionSymbol.svg" alt="Subtraction symbol" />
       </a>
       <a
         href="game.html?mode=multiplication"
         class="game-button game-button-multiplication"
+        title="Play Multiplication game"
       >
         <span> Multiplication </span>
-        <img class="multiplication-svg" src="assets/multiplicationSymbol.svg" />
+        <img class="multiplication-svg" src="assets/multiplicationSymbol.svg" alt="Multiplication symbol" />
       </a>
       <a
         href="game.html?mode=division"
         class="game-button game-button-division"
+        title="Play Division game"
       >
-        <span> Division </span> <img class="division-svg" src="assets/divisionSymbol.svg" />
+        <span> Division </span> <img class="division-svg" src="assets/divisionSymbol.svg" alt="Division symbol" />
       </a>
-      <a href="game.html?mode=random" class="game-button game-button-dice">
-        <span> Random </span> <img class="dice-svg" src="assets/diceSymbol.svg" />
+      <a href="game.html?mode=random" class="game-button game-button-dice" title="Play Random game">
+        <span> Random </span> <img class="dice-svg" src="assets/diceSymbol.svg" alt="Dice symbol" />
       </a>
     </div>
   </body>
