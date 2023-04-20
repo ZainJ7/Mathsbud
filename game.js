@@ -208,6 +208,7 @@ function buyAvatar(index) {
     document.getElementById("current-avatar").innerHTML = "Avatar: " + currentAvatar;
     localStorage.setItem("currentAvatar", currentAvatar); 
     localStorage.setItem("coins", coins); // Save the updated coin amount in localStorage
+    document.getElementById("nice-choice").play(); 
   } else {
     showAlertMessage("Not enough coins to buy this avatar!");
   }
