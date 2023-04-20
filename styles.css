@@ -13,7 +13,7 @@ body {
   background-image: url("/assets/websiteClouds.png");
   background-repeat: no-repeat;
   background-size: cover;
-  cursor: url('assets/cursor.svg'), auto;
+  cursor: url("assets/cursor.svg"), auto;
 }
 
 .logo img {
@@ -202,8 +202,6 @@ body {
   gap: 20px;
 }
 
-
-
 #info-container {
   grid-column: 1 / 4; /* Updated to span all columns */
   display: flex;
@@ -341,7 +339,7 @@ body {
   background: #ff434d;
   color: white;
   border: none;
-  /* cursor: pointer; */
+  cursor: pointer;
   border-radius: 5px;
   box-shadow: 0px 6px 0px 1px #c81c25;
 }
@@ -370,7 +368,7 @@ body {
   font-size: 35px;
   color: white;
   border: none;
-  /* cursor: pointer; */
+  cursor: pointer;
   border-radius: 5px;
 }
 
@@ -420,8 +418,80 @@ body {
   text-align: center;
   width: 100%;
   color: black;
-  backdrop-filter: blur(16px); 
+  backdrop-filter: blur(16px);
 }
+
+.content-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto;
+  gap: 10px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.coins-container, .current-avatar-container {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-family: "Rounded Mplus 1c";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+}
+
+
+#avatars-label {
+  font-family: "Rounded Mplus 1c";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+#avatars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;  
+}
+
+.avatar-button {
+  padding: 10px 10px;
+  border-radius: 24px;
+  font-family: "Rounded Mplus 1c";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 37px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  flex-grow: 1;
+  flex-direction: column;
+  border: none;
+}
+
+.avatar-button-style {
+  background: #7ce24c;
+  box-shadow: 0px 6px 0px 1px #73b74b;
+  gap: 10px;
+}
+
+.avatar-button-style:hover {
+  background-color: #73b74b;
+}
+
+#alert-message {
+  font-family: "Rounded Mplus 1c";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 30px;;
+  color: #c81c25;
+}
+
 
 
 
@@ -432,13 +502,18 @@ body {
     grid-template-rows: auto 80px 1fr;
   }
 
+  .content-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
   .card-1 {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     display: flex;
     justify-content: center;
-    width: 100%; 
-    height: auto; 
+    width: 100%;
+    height: auto;
   }
 
   .card-2 {
@@ -449,8 +524,8 @@ body {
     flex-wrap: wrap;
     padding: 10px;
     justify-content: center;
-    width: 100%; 
-    height: auto; 
+    width: 100%;
+    height: auto;
   }
 
   .game-card-3 {
@@ -502,8 +577,8 @@ body {
     max-height: 80px;
   }
   .logo img {
-    width: 100%; 
-    height: auto; 
+    width: 100%;
+    height: auto;
   }
   .game-button {
     width: 100%;
@@ -512,10 +587,6 @@ body {
     width: 100%;
   }
 }
-
-
-
-
 
 /* For screens larger than 768px */
 @media (min-width: 768px) {
@@ -547,6 +618,64 @@ body {
     background-image: url("/assets/websiteClouds.png");
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+  .content-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .coins-container, .current-avatar-container {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-family: "Rounded Mplus 1c";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+  }
+
+  #avatars-label {
+    font-family: "Rounded Mplus 1c";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  #avatars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .avatar-button {
+    padding: 10px 10px;
+    border-radius: 24px;
+    font-family: "Rounded Mplus 1c";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 37px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    flex-grow: 1;
+    flex-direction: column;
+    height: 160px;
+  }
+
+  .avatar-button-style {
+    background: #7ce24c;
+    box-shadow: 0px 6px 0px 1px #73b74b;
+    gap: 10px;
+  }
+
+  .avatar-button-style:hover {
+    background-color: #73b74b;
   }
 
   .card-1 {
@@ -653,14 +782,12 @@ body {
   }
 }
 
-
 /* repeat background when larger height */
 @media (min-height: 680px) {
   body {
     background-repeat: repeat;
   }
 }
-
 
 @media (max-width: 269px) {
   .game-card-3 {
@@ -675,3 +802,4 @@ body {
     margin-top: 50px;
   }
 }
+

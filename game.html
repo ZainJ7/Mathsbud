@@ -98,6 +98,18 @@
         <button class="restart-button" onclick="restartGame()">
           Restart Game
         </button>
+        <div class="content-container" style="display: none" role="group">
+          <div class="coins-container" role="status" aria-live="polite" aria-atomic="true">
+            <div id="coins">Coins: 0</div>
+          </div>
+          <div id="alert-message" class="alert-message" style="display: none;"></div>
+          <div class="current-avatar-container" role="status" aria-live="polite" aria-atomic="true">
+            <div id="current-avatar">Avatar: </div>
+          </div>
+          <div class="avatars-container" role="region" aria-labelledby="avatars-label">
+            <h2 id="avatars-label">Avatars:</h2>
+            <div id="avatars"></div>
+          </div>
       </div>
     </div>
     <script src="game.js"></script>

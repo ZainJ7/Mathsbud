@@ -6,21 +6,65 @@ var mode = urlParams.get("mode");
 // Initialize variables
 var num1, num2, answer, choices, correct, score, mode;
 score = 0;
+var coins = localStorage.getItem("coins") ? parseInt(localStorage.getItem("coins")) : 0;
+document.getElementById("coins").innerHTML = "Coins: " + coins;
+var avatars = [
+  { emoji: "🐶", price: 10 },
+  { emoji: "🐱", price: 20 },
+  { emoji: "🦊", price: 30 },
+  { emoji: "🦁", price: 40 },
+  { emoji: "🐵", price: 50 },
+  { emoji: "🦄", price: 60 },
+];
+var currentAvatar = localStorage.getItem("currentAvatar") || "";
+document.getElementById("current-avatar").innerHTML = "Avatar: " + currentAvatar;
+
+
 
 function showModes() {
   document.getElementById("info-container").style.display = "none";
   document.getElementById("modes-container").style.display = "block";
   document.getElementsByClassName("content-container")[0].style.display =
     "flex";
+  document.getElementsByClassName("content-container")[1].style.display =
+    "flex";
   document.getElementsByClassName("restart-container")[0].style.display =
     "flex";
+  showAvatars(); // Call the function to display the avatars for purchase
 }
+
+
+// Generate the first problem
+setMode(mode);
+
 
 // Function to set the game mode
 function setMode(gameMode) {
   mode = gameMode || "addition"; // set "addition" as default mode if gameMode is undefined
   restartGame();
 }
+
+function showAvatars() {
+  var avatarsContainer = document.getElementById("avatars");
+  avatarsContainer.innerHTML = "";
+  for (var i = 0; i < avatars.length; i++) {
+    var avatarButton = document.createElement("button");
+    avatarButton.classList.add("avatar-button", "avatar-button-style");
+    avatarButton.innerHTML = avatars[i].emoji + "<br>(" + avatars[i].price + " coins)";
+    
+    // Use an IIFE to pass the current value of i to the event listener
+    (function(index) {
+      avatarButton.addEventListener("click", function() {
+        buyAvatar(index);
+      });
+    })(i);
+    
+    avatarsContainer.appendChild(avatarButton);
+  }
+}
+
+
+
 
 function newProblem() {
   // Generate random game mode if the current mode is "random"
@@ -107,6 +151,7 @@ function selectAnswer(selected) {
         document.getElementById("result").innerHTML = "";
       }, 1000);
       document.getElementById("win-sound").play(); 
+      updateCoins();
     } else {
       newProblem();
       setTimeout(function () {
@@ -135,6 +180,41 @@ function selectAnswer(selected) {
     audio.play(); // play the sound effect
   }
 }
+
+// Update coins after winning
+function updateCoins() {
+  coins += 10;
+  localStorage.setItem("coins", coins);
+  document.getElementById("coins").innerHTML = "Coins: " + coins;
+}
+
+
+function showAlertMessage(message) {
+  var alertMessageElement = document.getElementById("alert-message");
+  alertMessageElement.innerHTML = message;
+  alertMessageElement.style.display = "block";
+  setTimeout(function () {
+    alertMessageElement.style.display = "none";
+  }, 2000);
+}
+
+
+function buyAvatar(index) {
+  var avatar = avatars[index];
+  if (coins >= avatar.price) {
+    coins -= avatar.price;
+    currentAvatar = avatar.emoji;
+    document.getElementById("coins").innerHTML = "Coins: " + coins;
+    document.getElementById("current-avatar").innerHTML = "Avatar: " + currentAvatar;
+    localStorage.setItem("currentAvatar", currentAvatar); 
+    localStorage.setItem("coins", coins); // Save the updated coin amount in localStorage
+  } else {
+    showAlertMessage("Not enough coins to buy this avatar!");
+  }
+}
+
+
+
 
 
 // Function to handle the "Restart Game" button click
