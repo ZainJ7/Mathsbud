@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Math Game</title>
+    <meta name="description" content="Educational math game website that challenges players to solve math problems and earn points. Play now and have fun!">
+    <title>Game | Mathsbud</title>
     <link rel="stylesheet" href="styles.css" />
     <audio id="correct-sound" src="assets/correct-sound.mp3"></audio>
     <audio id="correct-sound-2" src="assets/correct-sound-2.mp3"></audio>
@@ -12,20 +13,44 @@
     <audio id="incorrect-sound" src="assets/incorrect-sound.mp3"></audio>
     <audio id="incorrect-sound-2" src="assets/incorrect-sound-2.mp3"></audio>
     <audio id="win-sound" src="assets/you-win.mp3"></audio>
-    <audio id="nice-choice" src="assets/nice-choice.mp3"></audio>
 
   </head>
 
   <body>
     <div class="card-1" role="banner">
-      <a href="/" class="logo" title="Return to the homepage">
+      <a href="index.html" class="logo" title="Return to the homepage">
         <img src="assets/logo.png" alt="Logo of the math game" />
       </a>
     </div>
     <div class="card-2" role="navigation">
-      <a href="index.html" class="nav-button nav-button-home" title="Go to the homepage"> Home </a>
-      <a href="game.html" class="nav-button nav-button-games" title="Go to the games page"> Games </a>
-      <a href="about-us.html" class="nav-button nav-button-about-us" title="Go to the About Us page"> About Us </a>
+      <a
+        href="index.html"
+        class="nav-button nav-button-home"
+        title="Go to the homepage"
+      >
+        Home
+      </a>
+      <a
+        href="game.html"
+        class="nav-button nav-button-games"
+        title="Go to the games page"
+      >
+        Games
+      </a>
+      <a
+        href="about-us.html"
+        class="nav-button nav-button-about-us"
+        title="Go to the About Us page"
+      >
+        About Us
+      </a>
+ <a
+        href="avatar-shop.html"
+        class="nav-button nav-button-avatar-shop"
+        title="Go to the Avatar shop page"
+      >
+        Avatar Shop
+      </a>
     </div>
     <div class="game-card-3" role="main">
       <div id="info-container" role="alert">
@@ -98,20 +123,16 @@
         </div>
       </div>
       <div class="restart-container" style="display: none">
+        <div id="remaining-questions">Questions Answered: 0</div>
         <button class="restart-button" onclick="restartGame()">
           Restart Game
         </button>
         <div class="content-container" style="display: none" role="group">
-          <div class="coins-container" role="status" aria-live="polite" aria-atomic="true">
+          <div class="coins-container-game" role="status" aria-live="polite" aria-atomic="true">
             <div id="coins">Coins: 0</div>
           </div>
-          <div id="alert-message" class="alert-message" style="display: none;"></div>
-          <div class="current-avatar-container" role="status" aria-live="polite" aria-atomic="true">
+          <div class="current-avatar-container-game" role="status" aria-live="polite" aria-atomic="true">
             <div id="current-avatar">Avatar: </div>
-          </div>
-          <div class="avatars-container" role="region" aria-labelledby="avatars-label">
-            <h2 id="avatars-label">Avatars:</h2>
-            <div id="avatars"></div>
           </div>
       </div>
     </div>

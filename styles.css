@@ -81,6 +81,15 @@ body {
   background-color: #d760b4;
 }
 
+.nav-button-avatar-shop {
+  background: #ff434d;
+  box-shadow: 0px 6px 0px 1px #c81c25;
+}
+
+.nav-button-avatar-shop:hover {
+  background-color: #c81c25;
+}
+
 .nav-button-about-us {
   background: #75b7ff;
   box-shadow: 0px 6px 0px 1px #429af7;
@@ -166,7 +175,7 @@ body {
   font-style: normal;
   font-weight: 800;
   font-size: 50px;
-  line-height: 37px;
+  line-height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -430,7 +439,8 @@ body {
   max-width: 1200px;
 }
 
-.coins-container, .current-avatar-container {
+.coins-container,
+.current-avatar-container {
   margin-top: 10px;
   padding: 10px;
   border-radius: 8px;
@@ -440,7 +450,6 @@ body {
   font-weight: 800;
   font-size: 40px;
 }
-
 
 #avatars-label {
   font-family: "Rounded Mplus 1c";
@@ -453,7 +462,7 @@ body {
 #avatars {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;  
+  gap: 16px;
 }
 
 .avatar-button {
@@ -488,12 +497,9 @@ body {
   font-family: "Rounded Mplus 1c";
   font-style: normal;
   font-weight: 800;
-  font-size: 30px;;
+  font-size: 30px;
   color: #c81c25;
 }
-
-
-
 
 /* For screens smaller than 768px */
 @media (max-width: 767px) {
@@ -529,6 +535,16 @@ body {
   }
 
   .game-card-3 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .avatar-card-3 {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
     border-radius: 5px;
@@ -612,7 +628,7 @@ body {
   body {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 120px 1fr 1fr;
+    grid-template-rows: 130px 1fr 1fr;
     gap: 40px;
     padding: 24px;
     background-image: url("/assets/websiteClouds.png");
@@ -625,7 +641,8 @@ body {
     gap: 20px;
   }
 
-  .coins-container, .current-avatar-container {
+  .coins-container,
+  .current-avatar-container {
     margin-top: 10px;
     padding: 10px;
     border-radius: 8px;
@@ -656,10 +673,11 @@ body {
     font-family: "Rounded Mplus 1c";
     font-style: normal;
     font-weight: 800;
-    font-size: 30px;
-    line-height: 37px;
+    font-size: 50px;
+    line-height: 50px;
     display: flex;
     align-items: center;
+    justify-content: center; /* Add this line */
     text-align: center;
     color: #ffffff;
     text-decoration: none;
@@ -700,6 +718,17 @@ body {
   }
 
   .game-card-3 {
+    grid-column: 1 / 3;
+    grid-row: 2 / 4;
+    width: 100%;
+    border-radius: 5px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  .avatar-card-3 {
     grid-column: 1 / 3;
     grid-row: 2 / 4;
     width: 100%;
@@ -794,6 +823,10 @@ body {
     margin-top: 50px;
   }
 
+  .avatar-card-3 {
+    margin-top: 50px;
+  }
+
   .about-us-card-3 {
     margin-top: 50px;
   }
@@ -803,3 +836,121 @@ body {
   }
 }
 
+@media screen and (max-width: 997px) and (min-width: 768px) {
+  body {
+    grid-template-rows: 220px 1fr 1fr;
+  }
+}
+
+.avatar-card-3 {
+  grid-column: 1 / 3;
+  grid-row: 2 / 4;
+  width: 100%;
+  border-radius: 5px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.coins-container {
+  grid-column: 1 / 2;
+  grid-row: 1;
+}
+
+.current-avatar-container {
+  grid-column: 1 / 2;
+  grid-row: 2;
+}
+
+.avatars-container {
+  grid-column: 2 / 4;
+  grid-row: 1 / 3;
+}
+
+#avatars-label {
+  font-family: "Rounded Mplus 1c";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  margin-bottom: 16px;
+}
+
+#avatars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.coins-container,
+.current-avatar-container {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-family: "Rounded Mplus 1c";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 60px;
+  grid-column: 1;
+}
+
+@media (max-width: 767px) {
+  .avatar-card-3 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #avatars-label {
+    font-family: "Rounded Mplus 1c";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    margin-bottom: 16px;
+  }
+
+  .coins-container,
+  .current-avatar-container,
+  .avatars-container {
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-family: "Rounded Mplus 1c";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 60px;
+    flex: 1;
+    margin: 10px;
+  }
+}
+
+
+#remaining-questions {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-family: "Rounded Mplus 1c";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  grid-column: 1;
+}
+
+.coins-container-game,
+.current-avatar-container-game {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-family: "Rounded Mplus 1c";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+}

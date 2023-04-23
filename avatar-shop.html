@@ -8,11 +8,12 @@
       name="description"
       content="Educational math game website that challenges players to solve math problems and earn points. Play now and have fun!"
     />
-    <title>About Us | Mathsbud</title>
+    <title>Avatar Shop | Mathsbud</title>
     <link rel="stylesheet" href="styles.css" />
+    <audio id="nice-choice" src="assets/nice-choice.mp3"></audio>
   </head>
 
-  <body>
+  <body onload="showAvatars()">
     <div class="card-1" role="banner">
       <a href="index.html" class="logo" title="Return to the homepage">
         <img src="assets/logo.png" alt="Logo of Mathsbud" />
@@ -48,28 +49,34 @@
         Avatar Shop
       </a>
     </div>
-    <div class="about-us-card-3" role="main">
-      <div id="about-us-container">
-        <h1>About Us</h1>
-        <p>
-          Welcome to Mathsbud! We are a team of experienced educators and
-          developers who are passionate about helping children aged 7-8 develop
-          their maths skills through engaging and interactive games.
-        </p>
-        <p>
-          Our goal is to make learning maths fun and accessible for all
-          children, regardless of their background or ability. We believe that
-          every child has the potential to excel in maths, and our games are
-          designed to help them build a solid foundation of key maths concepts,
-          such as addition, subtraction, multiplication, and division.
-        </p>
-        <p>
-          At Mathsbud, we believe that learning should be fun and engaging, and
-          we are dedicated to helping children develop a lifelong love of maths.
-          Thank you for choosing Mathsbud, and we hope you and your child enjoy
-          our games!
-        </p>
+
+    <div class="avatar-card-3" role="main">
+      <div
+        class="coins-container"
+        role="status"
+        aria-live="polite"
+        aria-atomic="true"
+      >
+        <div id="coins">Coins: 0</div>
+      </div>
+      <div id="alert-message" class="alert-message"></div>
+      <div
+        class="current-avatar-container"
+        role="status"
+        aria-live="polite"
+        aria-atomic="true"
+      >
+        <div id="current-avatar">Avatar:</div>
+      </div>
+      <div
+        class="avatars-container"
+        role="region"
+        aria-labelledby="avatars-label"
+      >
+        <h2 id="avatars-label">Avatars:</h2>
+        <div id="avatars"></div>
       </div>
     </div>
+    <script src="avatar-shop.js"></script>
   </body>
 </html>
