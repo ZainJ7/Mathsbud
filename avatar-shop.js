@@ -39,6 +39,7 @@ function showAlertMessage(message) {
   var alertMessageElement = document.getElementById("alert-message");
   alertMessageElement.innerHTML = message;
   alertMessageElement.style.display = "block";
+  document.getElementById("incorrect-sound-2").play();
   setTimeout(function () {
     alertMessageElement.style.display = "none";
   }, 2000);

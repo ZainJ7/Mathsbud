@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.png">
     <meta
       name="description"
       content="Educational math game website that challenges players to solve math problems and earn points. Play now and have fun!"
@@ -11,6 +12,7 @@
     <title>Avatar Shop | Mathsbud</title>
     <link rel="stylesheet" href="styles.css" />
     <audio id="nice-choice" src="assets/nice-choice.mp3"></audio>
+    <audio id="incorrect-sound-2" src="assets/incorrect-sound-2.mp3"></audio>
   </head>
 
   <body onload="showAvatars()">
@@ -57,9 +59,9 @@
         aria-live="polite"
         aria-atomic="true"
       >
+        <div id="alert-message" class="alert-message"></div>
         <div id="coins">Coins: 0</div>
       </div>
-      <div id="alert-message" class="alert-message"></div>
       <div
         class="current-avatar-container"
         role="status"

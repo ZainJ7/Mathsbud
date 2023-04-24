@@ -25,7 +25,6 @@ function showModes() {
     "flex";
   document.getElementsByClassName("restart-container")[0].style.display =
     "flex";
-  showAvatars(); // Call the function to display the avatars for purchase
 }
 
 // Generate the first problem
