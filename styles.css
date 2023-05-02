@@ -22,7 +22,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   cursor: url("assets/cursor.svg"), auto;
-  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-family: 'M PLUS Rounded 1c', arial;
 }
 
 .logo img {
