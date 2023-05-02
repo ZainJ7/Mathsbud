@@ -58,7 +58,7 @@ body {
 .nav-button {
   padding: 20px 20px;
   border-radius: 18px;
-  font-family: "Rounded Mplus 1c";
+  font-family: "M PLUS Rounded 1c";
   font-style: normal;
   font-weight: 800;
   font-size: 35px;
@@ -111,7 +111,7 @@ body {
 .game-button {
   padding: 10px 10px;
   border-radius: 24px;
-  font-family: "Rounded Mplus 1c";
+  font-family: "M PLUS Rounded 1c";
   font-style: normal;
   font-weight: 800;
   font-size: 40px;
@@ -180,7 +180,7 @@ body {
   padding: 20px 10px;
   gap: 20px;
   border-radius: 24px;
-  font-family: "Rounded Mplus 1c";
+  font-family: "M PLUS Rounded 1c";
   font-style: normal;
   font-weight: 800;
   font-size: 50px;
@@ -229,7 +229,7 @@ body {
   padding: 20px;
   outline: black 2px solid;
   border-radius: 5px;
-  font-family: "Rounded Mplus 1c";
+  font-family: "M PLUS Rounded 1c";
   font-size: 35px;
   line-height: 1.5;
   text-align: center;
@@ -242,7 +242,7 @@ body {
   flex-direction: column;
   width: 100%;
   grid-column: 1/2;
-  font-family: "Rounded Mplus 1c";
+  font-family: "M PLUS Rounded 1c";
   font-style: normal;
   font-weight: 800;
   font-size: 20px;
@@ -304,7 +304,7 @@ body {
 }
 
 #problem {
-  font-family: "Rounded Mplus 1c";
+  font-family: "M PLUS Rounded 1c";
   font-style: normal;
   font-weight: 800;
   font-size: 50px;
@@ -321,7 +321,7 @@ body {
   border: none;
   /* cursor: pointer; */
   border-radius: 5px;
-  font-family: "Rounded Mplus 1c";
+  font-family: "M PLUS Rounded 1c";
   font-style: normal;
   font-weight: 800;
   font-size: 35px;
@@ -332,7 +332,7 @@ body {
 }
 
 #result {
-  font-family: "Rounded Mplus 1c";
+  font-family: "M PLUS Rounded 1c";
   font-style: normal;
   font-weight: 800;
   font-size: 35px;
@@ -340,7 +340,7 @@ body {
 }
 
 #score {
-  font-family: "Rounded Mplus 1c";
+  font-family: "M PLUS Rounded 1c";
   font-style: normal;
   font-weight: 800;
   font-size: 35px;
@@ -350,7 +350,7 @@ body {
 .restart-button {
   margin: 5px;
   padding: 10px;
-  font-family: "Rounded Mplus 1c";
+  font-family: "M PLUS Rounded 1c";
   font-style: normal;
   font-weight: 800;
   font-size: 35px;
@@ -370,7 +370,7 @@ body {
 .options-container h2,
 .result-container h2,
 .score-container h2 {
-  font-family: "Rounded Mplus 1c";
+  font-family: "M PLUS Rounded 1c";
   font-style: normal;
   font-weight: 800;
   font-size: 35px;
@@ -380,7 +380,7 @@ body {
 .mode-button {
   margin: 5px;
   padding: 10px;
-  font-family: "Rounded Mplus 1c";
+  font-family: "M PLUS Rounded 1c";
   font-style: normal;
   font-weight: 800;
   font-size: 35px;
@@ -403,7 +403,7 @@ body {
 #agree-button {
   margin: 5px;
   padding: 10px;
-  font-family: "Rounded Mplus 1c";
+  font-family: "M PLUS Rounded 1c";
   font-style: normal;
   font-weight: 800;
   font-size: 35px;
@@ -430,7 +430,7 @@ body {
   gap: 10px;
   outline: black 2px solid;
   border-radius: 5px;
-  font-family: "Rounded Mplus 1c";
+  font-family: "M PLUS Rounded 1c";
   font-size: 25px;
   line-height: 1.5;
   text-align: center;
@@ -454,14 +454,14 @@ body {
   padding: 10px;
   border-radius: 8px;
   text-align: center;
-  font-family: "Rounded Mplus 1c";
+  font-family: "M PLUS Rounded 1c";
   font-style: normal;
   font-weight: 800;
   font-size: 40px;
 }
 
 #avatars-label {
-  font-family: "Rounded Mplus 1c";
+  font-family: "M PLUS Rounded 1c";
   font-style: normal;
   font-weight: 800;
   font-size: 40px;
@@ -477,7 +477,7 @@ body {
 .avatar-button {
   padding: 10px 10px;
   border-radius: 24px;
-  font-family: "Rounded Mplus 1c";
+  font-family: "M PLUS Rounded 1c";
   font-style: normal;
   font-weight: 800;
   font-size: 30px;
@@ -503,7 +503,7 @@ body {
 }
 
 #alert-message {
-  font-family: "Rounded Mplus 1c";
+  font-family: "M PLUS Rounded 1c";
   font-style: normal;
   font-weight: 800;
   font-size: 30px;
@@ -656,14 +656,14 @@ body {
     padding: 10px;
     border-radius: 8px;
     text-align: center;
-    font-family: "Rounded Mplus 1c";
+    font-family: "M PLUS Rounded 1c";
     font-style: normal;
     font-weight: 800;
     font-size: 40px;
   }
 
   #avatars-label {
-    font-family: "Rounded Mplus 1c";
+    font-family: "M PLUS Rounded 1c";
     font-style: normal;
     font-weight: 800;
     font-size: 24px;
@@ -679,7 +679,7 @@ body {
   .avatar-button {
     padding: 10px 10px;
     border-radius: 24px;
-    font-family: "Rounded Mplus 1c";
+    font-family: "M PLUS Rounded 1c";
     font-style: normal;
     font-weight: 800;
     font-size: 50px;
@@ -795,7 +795,7 @@ body {
     gap: 10px;
     outline: black 2px solid;
     border-radius: 5px;
-    font-family: "Rounded Mplus 1c";
+    font-family: "M PLUS Rounded 1c";
     font-size: 25px;
     line-height: 1.5;
     text-align: center;
@@ -878,7 +878,7 @@ body {
 }
 
 #avatars-label {
-  font-family: "Rounded Mplus 1c";
+  font-family: "M PLUS Rounded 1c";
   font-style: normal;
   font-weight: 800;
   font-size: 50px;
@@ -897,7 +897,7 @@ body {
   padding: 10px;
   border-radius: 8px;
   text-align: center;
-  font-family: "Rounded Mplus 1c";
+  font-family: "M PLUS Rounded 1c";
   font-style: normal;
   font-weight: 800;
   font-size: 60px;
@@ -917,7 +917,7 @@ body {
   }
 
   #avatars-label {
-    font-family: "Rounded Mplus 1c";
+    font-family: "M PLUS Rounded 1c";
     font-style: normal;
     font-weight: 800;
     font-size: 50px;
@@ -930,7 +930,7 @@ body {
     padding: 10px;
     border-radius: 8px;
     text-align: center;
-    font-family: "Rounded Mplus 1c";
+    font-family: "M PLUS Rounded 1c";
     font-style: normal;
     font-weight: 800;
     font-size: 60px;
@@ -945,7 +945,7 @@ body {
   padding: 10px;
   border-radius: 8px;
   text-align: center;
-  font-family: "Rounded Mplus 1c";
+  font-family: "M PLUS Rounded 1c";
   font-style: normal;
   font-weight: 800;
   font-size: 40px;
@@ -958,7 +958,7 @@ body {
   padding: 10px;
   border-radius: 8px;
   text-align: center;
-  font-family: "Rounded Mplus 1c";
+  font-family: "M PLUS Rounded 1c";
   font-style: normal;
   font-weight: 800;
   font-size: 40px;
