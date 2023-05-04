@@ -4,10 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.png">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap" rel="stylesheet">
-    <meta name="description" content="Educational math game website that challenges players to solve math problems and earn points. Play now and have fun!">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="description"
+      content="Educational math game website that challenges players to solve math problems and earn points. Play now and have fun!"
+    />
     <title>Game | Mathsbud</title>
     <link rel="stylesheet" href="styles.css" />
     <audio id="correct-sound" src="assets/correct-sound.mp3"></audio>
@@ -16,7 +22,6 @@
     <audio id="incorrect-sound" src="assets/incorrect-sound.mp3"></audio>
     <audio id="incorrect-sound-2" src="assets/incorrect-sound-2.mp3"></audio>
     <audio id="win-sound" src="assets/you-win.mp3"></audio>
-
   </head>
 
   <body>
@@ -41,18 +46,18 @@
         Games
       </a>
       <a
-        href="about-us.html"
-        class="nav-button nav-button-about-us"
-        title="Go to the About Us page"
-      >
-        About Us
-      </a>
- <a
         href="avatar-shop.html"
         class="nav-button nav-button-avatar-shop"
         title="Go to the Avatar shop page"
       >
         Avatar Shop
+      </a>
+      <a
+        href="about-us.html"
+        class="nav-button nav-button-about-us"
+        title="Go to the About Us page"
+      >
+        About Us
       </a>
     </div>
     <div class="game-card-3" role="main">
@@ -62,13 +67,23 @@
           In this game, you will be given a math problem to solve. You will have
           to choose the correct answer from the options. If you get the answer
           right, you will earn a point. But, if you get the answer wrong, you
-          will lose a point. The goal of the game is to score 10 points. 
-          You can also use coins you earn to buy cool avatars!  Have
-          fun and good luck!
+          will lose a point. The goal of the game is to score 10 points. You can
+          also use coins you earn to buy cool avatars! Have fun and good luck!
         </p>
-        <button id="agree-button" onclick="showModes()" aria-label="Agree and Play Button">Agree and Play</button>
+        <button
+          id="agree-button"
+          onclick="showModes()"
+          aria-label="Agree and Play Button"
+        >
+          Agree and Play
+        </button>
       </div>
-      <div id="modes-container" style="display: none" role="region" aria-labelledby="modes-label">
+      <div
+        id="modes-container"
+        style="display: none"
+        role="region"
+        aria-labelledby="modes-label"
+      >
         <h2 id="modes-label">Modes:</h2>
         <ul>
           <li>
@@ -118,10 +133,20 @@
           <h2>Options:</h2>
           <div id="options"></div>
         </div>
-        <div class="result-container" role="status" aria-live="polite" aria-atomic="true">
+        <div
+          class="result-container"
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+        >
           <div id="result"></div>
         </div>
-        <div class="score-container" role="status" aria-live="polite" aria-atomic="true">
+        <div
+          class="score-container"
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+        >
           <div id="score"></div>
         </div>
       </div>
@@ -131,12 +156,23 @@
           Restart Game
         </button>
         <div class="content-container" style="display: none" role="group">
-          <div class="coins-container-game" role="status" aria-live="polite" aria-atomic="true">
+          <div
+            class="coins-container-game"
+            role="status"
+            aria-live="polite"
+            aria-atomic="true"
+          >
             <div id="coins">Coins: 0</div>
           </div>
-          <div class="current-avatar-container-game" role="status" aria-live="polite" aria-atomic="true">
-            <div id="current-avatar">Avatar: </div>
+          <div
+            class="current-avatar-container-game"
+            role="status"
+            aria-live="polite"
+            aria-atomic="true"
+          >
+            <div id="current-avatar">Avatar:</div>
           </div>
+        </div>
       </div>
     </div>
     <script src="game.js"></script>
